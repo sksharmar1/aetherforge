@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherForge AI | AI-Powered Digital Marketing Agency</title>
+    <meta name="description" content="45 specialized AI agents deliver SEO, PPC, Social Media, Content & more. 24/7 execution at a fraction of traditional agency costs. Book your free strategy audit today.">
+
+    <!-- Google Analytics 4 (You already added your G- ID here) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NC0SHZLEQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5NC0SHZLEQ');
+    </script>
+
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --accent: #22D3EE;
+            --dark: #0F172A;
+            --gray: #1E2937;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--dark);
+            color: #E2E8F0;
+            line-height: 1.7;
+        }
+        header {
+            background: rgba(15,23,42,0.95);
+            backdrop-filter: blur(12px);
+            padding: 1.3rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2.15rem;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: -1.5px;
+        }
+        nav a {
+            color: #E2E8F0;
+            margin-left: 2.3rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hero {
+            padding: 180px 5% 140px;
+            text-align: center;
+            background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.85)),
+                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat fixed;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 20%, rgba(79,70,229,0.3), transparent 60%);
+        }
+        .hero h1 {
+            font-size: 4.1rem;
+            line-height: 1.05;
+            margin-bottom: 1.4rem;
+            position: relative;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .cta {
+            background: var(--primary);
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .cta:hover {
+            background: #6366F1;
+            transform: translateY(-6px);
+        }
+
+        section { padding: 110px 5%; }
+        h2 {
+            font-size: 2.95rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: var(--accent);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+        }
+        .card {
+            background: var(--gray);
+            padding: 3.2rem 2.3rem;
+            border-radius: 24px;
+            text-align: center;
+            transition: all 0.4s;
+        }
+        .card:hover { transform: translateY(-15px); }
+        .package {
+            border: 3px solid var(--primary);
+            position: relative;
+        }
+        .package::after {
+            content: "MOST POPULAR";
+            position: absolute;
+            top: -18px;
+            right: 35px;
+            background: var(--primary);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+
+        form {
+            max-width: 660px;
+            margin: 0 auto;
+            background: var(--gray);
+            padding: 3.5rem;
+            border-radius: 24px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 17px;
+            margin: 15px 0;
+            background: #334155;
+            border: 1px solid #475569;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.07rem;
+        }
+
+        #success {
+            display: none;
+            text-align: center;
+            padding: 6rem 3rem;
+            background: var(--gray);
+            border-radius: 24px;
+            max-width: 660px;
+            margin: 50px auto;
+        }
+        footer {
+            background: #020617;
+            padding: 100px 5% 60px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .hero { padding: 130px 5% 100px; }
+            nav a { margin-left: 1.3rem; font-size: 0.96rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AetherForge AI</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#results">Results</a>
+            <a href="#about">About</a>
+            <a href="#audit">Free Audit</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>AI Agents Forging<br>Unstoppable Growth</h1>
+        <p>45 specialized AI experts deliver SEO, PPC, Social Media, Content, Email &amp; Web Optimization — 24/7 at a fraction of traditional agency costs.</p>
+        <button class="cta" onclick="document.getElementById('audit').scrollIntoView({behavior:'smooth'})">Get Your Free Strategy Audit</button>
+    </section>
+
+    <section id="services">
+        <h2>Our AI-Powered Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Essential</h3>
+                <p style="font-size:2rem;margin:1.4rem 0;"><strong>$1,499/mo</strong></p>
+                <p>SEO Foundations + Content Marketing + Social Media Management</p>
+            </div>
+            <div class="card package">
+                <h3>Growth</h3>
+                <p style="font-size:2rem;margin:1.4rem 0;"><strong>$3,499/mo</strong></p>
+                <p>Everything in Essential + Google &amp; Meta Ads + Email Automation + Reports</p>
+            </div>
+            <div class="card">
+                <h3>Premium</h3>
+                <p style="font-size:2rem;margin:1.4rem 0;"><strong>$6,999/mo</strong></p>
+                <p>Full suite + CRO + Video Production + Landing Pages + Performance Bonuses</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" style="background:var(--gray);">
+        <h2>Proven Results</h2>
+        <div class="grid">
+            <div class="card"><strong>Fashion E-commerce</strong><br>+187% Organic Traffic<br>+62% ROAS</div>
+            <div class="card"><strong>HVAC Service</strong><br>340 Qualified Leads<br>4.8× ROI</div>
+            <div class="card"><strong>SaaS Startup</strong><br>+91% Email Open Rate<br>Multiple Deals Closed</div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Built Differently. Built for Results.</h2>
+        <p style="max-width:860px;margin:0 auto 2.5rem;text-align:center;font-size:1.28rem;">
+            Launched in 2026 with <strong>45 expert AI agents</strong> working together 24/7 as one seamless team.
+        </p>
+        <p style="max-width:860px;margin:0 auto;text-align:center;">
+            Real-time data optimization • Human-level creativity • Zero human overhead
+        </p>
+    </section>
+
+    <section id="audit" style="background:var(--gray);">
+        <h2>Ready to Forge Your Growth?</h2>
+        <p style="text-align:center;font-size:1.32rem;margin-bottom:3rem;">Get a personalized AI strategy audit within 24 hours — completely free.</p>
+
+        <form id="contactForm" action="https://formspree.io/f/xeepprrb" method="POST">
+            <input type="text" name="name" placeholder="Your Full Name" required>
+            <input type="email" name="email" placeholder="Business Email" required>
+            <input type="text" name="business" placeholder="Business Name">
+            <select name="goal" required>
+                <option value="">Main Marketing Goal</option>
+                <option value="More Leads">More Leads</option>
+                <option value="Increase Sales">Increase Online Sales</option>
+                <option value="Brand Awareness">Brand Awareness</option>
+                <option value="Other">Other</option>
+            </select>
+            <textarea name="message" rows="5" placeholder="Tell us about your current marketing challenges..."></textarea>
+            <button type="submit" class="cta" style="width:100%;margin-top:25px;">Submit &amp; Get Free Audit</button>
+        </form>
+
+        <div id="success">
+            <h2 style="color:var(--accent);">✅ Thank You!</h2>
+            <p style="font-size:1.5rem;margin:2.2rem 0;">Your request has been received.</p>
+            <p>Our AI Account Manager will review your business and deliver a personalized growth strategy within 24 hours.</p>
+            <button class="cta" onclick="resetForm()" style="margin-top:3rem;">Submit Another Request</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AetherForge AI Digital Marketing Agency • getaetherforge.com</p>
+        <p style="margin-top:18px;">45 AI Agents • 24/7 Execution • Unstoppable Growth</p>
+    </footer>
+
+    <script>
+        if (window.location.hash === '#success') {
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('success').style.display = 'block';
+            triggerConfetti();
+        }
+
+        function triggerConfetti() {
+            for (let i = 0; i < 140; i++) {
+                setTimeout(() => {
+                    const c = document.createElement('div');
+                    c.style.cssText = `position:fixed;left:${Math.random()*100}vw;top:-20px;width:11px;height:11px;border-radius:50%;background:${['#4F46E5','#22D3EE','#A5B4FC'][Math.floor(Math.random()*3)]};z-index:9999;`;
+                    document.body.appendChild(c);
+                    let y = -20;
+                    const fall = setInterval(() => {
+                        y += 9;
+                        c.style.top = y + 'px';
+                        if (y > window.innerHeight + 100) { clearInterval(fall); c.remove(); }
+                    }, 20);
+                }, i * 5);
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('contactForm').style.display = 'block';
+            document.getElementById('success').style.display = 'none';
+            window.history.replaceState(null, null, window.location.pathname);
+        }
+    </script>
+</body>
+</html>
