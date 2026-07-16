@@ -13,7 +13,7 @@ Features:
 """
 
 from fastapi import FastAPI, Request, HTTPException
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import PlainTextResponse, FileResponse
 from pydantic import BaseModel
 from typing import Optional, Dict, List
 import os
@@ -565,6 +565,15 @@ async def initiate_outbound_call(
 # ============================================================================
 # HEALTH & INFO ENDPOINTS
 # ============================================================================
+
+@app.get("/")
+async def root():
+    """Serve the AetherForge landing page."""
+    landing = os.path.join(os.path.dirname(os.path.abspath(__file__)), "index.html")
+    if os.path.exists(landing):
+        return FileResponse(landing, media_type="text/html")
+    return {"service": "AetherForge Service Agent", "docs": "/docs", "health": "/health"}
+
 
 @app.get("/health")
 async def health_check():
