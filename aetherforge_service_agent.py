@@ -59,8 +59,13 @@ app = FastAPI(title="AetherForge Service Agent")
 # Initialize Twilio
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-# Initialize Supabase
-supabase: SupabaseClient = create_client(SUPABASE_URL, SUPABASE_KEY)
+# Initialize Supabase (lazily — so the app can boot without full config)
+supabase: Optional[SupabaseClient] = None
+if SUPABASE_URL and SUPABASE_KEY:
+    try:
+        supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+    except Exception as e:
+        logger.warning(f"Supabase init failed — CRM logging disabled: {e}")
 
 # Initialize Anthropic
 anthropic_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)

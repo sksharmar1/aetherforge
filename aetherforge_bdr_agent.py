@@ -14,6 +14,7 @@ Features:
 
 import csv
 import json
+import os
 import asyncio
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
@@ -22,6 +23,7 @@ import re
 from enum import Enum
 
 import anthropic
+from pydantic import BaseModel
 from supabase import create_client, Client as SupabaseClient
 import httpx
 
@@ -36,8 +38,13 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
-# Initialize clients
-supabase: SupabaseClient = create_client(SUPABASE_URL, SUPABASE_KEY)
+# Initialize clients (lazily — so the module loads without full config)
+supabase: Optional[SupabaseClient] = None
+if SUPABASE_URL and SUPABASE_KEY:
+    try:
+        supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+    except Exception as e:
+        logger.warning(f"Supabase init failed — CRM logging disabled: {e}")
 anthropic_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 # ============================================================================
